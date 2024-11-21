@@ -6,9 +6,20 @@ Flexible Android Widget
 
 ## Download
 
-Download via Gradle:
+Add it in your root build.gradle.kts at the end of repositories:
+```grovvy
+allprojects {
+    repositories {
+        mavenCentral()
+        maven(url = "https://jitpack.io")
+    }
+}
+```
+Add the dependency
 ```groovy
-implementation 'ru.rambler.android:swipe-layout:1.1.0'
+dependencies {
+    implementation("com.github.rambler-digital-solutions:swipe-layout-android:1.0.17")
+}
 ```
 ## Usage
 
