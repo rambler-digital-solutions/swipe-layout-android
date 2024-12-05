@@ -812,4 +812,14 @@ public class SwipeLayout extends ViewGroup {
 
         void onRightStickyEdge(SwipeLayout swipeLayout, boolean moveToRight);
     }
+
+    public abstract static class SimpleSwipeListener implements OnSwipeListener {
+        @Override public void onBeginSwipe(SwipeLayout swipeLayout, boolean moveToRight) { }
+
+        @Override public void onSwipeClampReached(SwipeLayout swipeLayout, boolean moveToRight) { }
+
+        @Override public void onLeftStickyEdge(SwipeLayout swipeLayout, boolean moveToRight) { }
+
+        @Override public void onRightStickyEdge(SwipeLayout swipeLayout, boolean moveToRight) { }
+    }
 }
