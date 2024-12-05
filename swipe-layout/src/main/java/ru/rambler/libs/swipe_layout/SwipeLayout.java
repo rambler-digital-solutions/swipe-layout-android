@@ -408,6 +408,7 @@ public class SwipeLayout extends ViewGroup {
             int stickyBound;
             if (dx > 0) {
                 //move to right
+                swipeListener.onPositionChanged(SwipeLayout.this, true, left);
 
                 if (leftView != null) {
                     stickyBound = getStickyBound(leftView);
@@ -426,6 +427,7 @@ public class SwipeLayout extends ViewGroup {
                 }
             } else if (dx < 0) {
                 //move to left
+                swipeListener.onPositionChanged(SwipeLayout.this, false, left);
 
                 if (leftView != null) {
                     stickyBound = getStickyBound(leftView);
@@ -811,5 +813,7 @@ public class SwipeLayout extends ViewGroup {
         void onLeftStickyEdge(SwipeLayout swipeLayout, boolean moveToRight);
 
         void onRightStickyEdge(SwipeLayout swipeLayout, boolean moveToRight);
+
+        void onPositionChanged(SwipeLayout swipeLayout,  boolean moveToRight , int left);
     }
 }

@@ -96,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onRightStickyEdge(SwipeLayout swipeLayout, boolean moveToRight) {
                 }
+
+                @Override
+                public void onPositionChanged(SwipeLayout swipeLayout, boolean moveToRight, int left) {
+                }
             });
 
             return new ViewHolder(itemView);
